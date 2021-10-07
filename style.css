@@ -1,0 +1,47 @@
+/* Reset */
+* {margin:0;padding:0;}
+img {border:none;}
+ul {list-style:none;}
+cite,em,var {font-style:normal;}
+table {border-collapse:collapse;}
+:focus, :active {outline:none;}
+
+/* 垂直间隔 */
+.y-blank05 {width:100%;height:5px;font-size:0;overflow:hidden;}
+.y-blank10 {width:100%;height:10px;font-size:0;overflow:hidden;}
+.y-blank12 {width:100%;height:12px;font-size:0;overflow:hidden;}
+.y-blank15 {width:100%;height:15px;font-size:0;overflow:hidden;}
+.y-blank20 {width:100%;height:20px;font-size:0;overflow:hidden;}
+.y-blank25 {width:100%;height:25px;font-size:0;overflow:hidden;}
+.y-blank30 {width:100%;height:30px;font-size:0;overflow:hidden;}
+.y-blank35 {width:100%;height:35px;font-size:0;overflow:hidden;}
+.y-blank40 {width:100%;height:40px;font-size:0;overflow:hidden;}
+.y-blank45 {width:100%;height:45px;font-size:0;overflow:hidden;}
+.y-blank50 {width:100%;height:50px;font-size:0;overflow:hidden;}
+.y-blank60 {width:100%;height:60px;font-size:0;overflow:hidden;}
+.y-blank70 {width:100%;height:70px;font-size:0;overflow:hidden;}
+.y-blank80 {width:100%;height:80px;font-size:0;overflow:hidden;}
+.y-blank90 {width:100%;height:90px;font-size:0;overflow:hidden;}
+.y-blank100 {width:100%;height:100px;font-size:0;overflow:hidden;}
+
+/* 辅助类 */
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}.clearfix{*zoom:1;}
+.clearperfect {clear:both;height:0;font-size:0;overflow:hidden;}
+
+/* Atomic */
+.fl {float:left;}
+.fr {float:right;}
+.db {display:block;}
+.oh {overflow:hidden;}
+.w1 {width:100%;}
+.ma {margin-left:auto;margin-right:auto;}
+.wbba {word-break:break-all;}
+
+
+
+html {font-size:100px;}
+body {line-height:1;box-sizing:border-box;font-size:.14rem;color:#333;font-family:'Microsoft YaHei';}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+
+.imgBlock {display:block;width:100%;}
