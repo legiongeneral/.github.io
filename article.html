@@ -31,6 +31,7 @@
     .Article .content {padding:60px 0;}
     .Article .content .nav {float:left;border-left:4px solid #F7E910;margin-left:30px;padding:30px 0 30px 20px;}
     .Article .content .nav.fixed {position:fixed;top:0;}
+    .Article .content .nav.bottom {top:unset;bottom:448px;}
     .Article .content .nav a {color:#aaa;line-height:1.7;}
     .Article .content .nav .on {color:#333;}
     .Article .content .nav h3 {font-size:18px;}
@@ -242,7 +243,7 @@
   </div>
 
 
-  <div class="footer">
+  <div class="footer" id="ArticleFooter">
     <div class="w">
       <div class="logo"><img src="./imgs/logo.png" />QW DeFi</div>
       <div class="link">
@@ -302,10 +303,17 @@
       });
 
       function articleNavFixed() {
+        var $ArticleNav = $('#ArticleNav');
         if ($window.scrollTop() > articleNavOffset) {
-          $('#ArticleNav').addClass('fixed');
+          $ArticleNav.addClass('fixed');
         } else {
-          $('#ArticleNav').removeClass('fixed');
+          $ArticleNav.removeClass('fixed');
+        }
+
+        if ($('#ArticleFooter').offset().top - $window.scrollTop() < $ArticleNav.outerHeight()) {
+          $ArticleNav.addClass('bottom');
+        } else {
+          $ArticleNav.removeClass('bottom');
         }
       }
 
@@ -318,8 +326,15 @@
             indexs.push(i);
           }
         }
+
         $('#ArticleNav a').removeClass('on');
-        $('#ArticleNav a').eq(indexs[0]-1).addClass('on');
+        if (indexs.length == $('#ArticleNav a').length) {
+          $('#ArticleNav a').eq(0).addClass('on');
+        } else if (indexs.length == 0) {
+          $('#ArticleNav a:last').addClass('on');
+        } else {
+          $('#ArticleNav a').eq(indexs[0]-1).addClass('on');
+        }
       }
     });
   </script>
