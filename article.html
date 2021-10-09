@@ -263,8 +263,7 @@
         var $this = $(this);
         $('#ArticleNav a').removeClass('on');
         $this.addClass('on');
-        // console.log($($this.attr('href')).offset().top, 3333)
-        //$window.animate({scrollTop: 100}, 1000);
+
         windowScorlling = true;
         $('html,body').animate({scrollTop: $($this.attr('href')).offset().top}, 300, function() {
           windowScorlling = false;
@@ -292,18 +291,16 @@
         var indexs = []
         for (var i = 0; i < articleTextOffset.length; i++) {
           var n = articleTextOffset[i];
-          if (n > $window.scrollTop()) {
+          if ($window.scrollTop() > n - 50) {
             indexs.push(i);
           }
         }
 
         $('#ArticleNav a').removeClass('on');
-        if (indexs.length == $('#ArticleNav a').length) {
+        if (indexs.length == 0) {
           $('#ArticleNav a').eq(0).addClass('on');
-        } else if (indexs.length == 0) {
-          $('#ArticleNav a:last').addClass('on');
         } else {
-          $('#ArticleNav a').eq(indexs[0]-1).addClass('on');
+          $('#ArticleNav a').eq(indexs[indexs.length-1]).addClass('on');
         }
       }
     });
