@@ -91,8 +91,9 @@ a:hover {color:#333;text-decoration:none;}
 .Index .article .list {padding:0 100px 60px;}
 .Index .article .list li {float:left;width:50%;height:80px;margin-top:60px;font-size:24px;}
 .Index .article .list li a {display:flex;align-items:center;}
+.Index .article .list li a:hover .icon {transform:translateY(-10px);}
 .Index .article .list .text {margin:0 20px;}
-.Index .article .list .icon {height:80px;}
+.Index .article .list .icon {height:80px;transform:translateY(0);transition:all .3s;}
 .Index .article .list .arrow {height:24px;}
 
 
